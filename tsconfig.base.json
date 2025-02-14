@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@monorepo/test-page": ["/page/src"],
+      "@monorepo/data-extraction-plugin": ["/data-extraction-plugin/src"],
+      "@monorepo/api": ["/api/src"]
+    }
+  },
+  "include": ["/**/*"]
+}
