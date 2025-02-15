@@ -1,3 +1,106 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-family-lato: 'Lato', sans-serif;
+  --font-size-xxxs: 12px;
+  --font-size-xxs: 14px;
+  --font-size-xs: 16px;
+  --font-size-sm: 20px;
+  --font-size-md: 24px;
+  --font-size-lg: 32px;
+  --font-size-xlg: 34px;
+  --font-weight-extrabold: 800;
+  --font-weight-bold: 700;
+  --font-weight-medium: 600;
+  --font-weight-regular: 400;
+  --line-height-default: 100%;
+  --line-height-sm: 130%;
+  --line-height-md: 140%;
+  --line-height-lg: 150%;
+  --border-radius-none: 0px;
+  --border-radius-md: 12px;
+  --border-radius-xd: 22px;
+  --border-radius-circular: 50%;
+  --border-width-none: 0px;
+  --border-width-thin: 2px;
+  --opacity-level-medium: 0.50;
+  --shadow-level-1: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  --spacing-quarck: 4px;
+  --spacing-nano: 8px;
+  --spacing-xxxs: 12px;
+  --spacing-xs: 24px;
+  --spacing-sm: 32px;
+  --brand-color-primary-main: #F5F5F5;
+  --brand-color-primary-light: #C4C4C4;
+  --brand-color-primary-medium: #616161;
+  --brand-color-primary-dark: #212121;
+  --brand-color-secundary-main: #F06F06;
+  --brand-color-secundary-lightest: #FBC5A0;
+  --brand-color-secundary-light: #FAAE4B;
+  --brand-color-secundary-medium: #FB8C01;
+  --brand-color-secundary-dark: #CC5E05;
+  --feedback-color-success-main: #20C6AD;
+  --feedback-color-success-light: #CCFCDE;
+  --feedback-color-success-medium: #00E9B4;
+  --feedback-color-success-dark: #006666;
+  --feedback-color-info-main: #3B98D2;
+  --feedback-color-info-light: #DCFCFE;
+  --feedback-color-info-medium: #48C1F8;
+  --feedback-color-info-dark: #103C75;
+  --feedback-color-alert-main: #FCC002;
+  --feedback-color-alert-lightest: #FCF6B2;
+  --feedback-color-alert-light: #FCFA37;
+  --feedback-color-alert-medium: #FBD24F;
+  --feedback-color-alert-dark: #CA9A00;
+  --feedback-color-error-main: #FF4D4D;
+  --feedback-color-error-lightest: #FFB3B3;
+  --feedback-color-error-light: #FF8080;
+  --feedback-color-error-medium: #FF6666;
+  --feedback-color-error-dark: #B23535;
+  --accessibility-color-main: #003087;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-family-lato, sans-serif);
+  background-color: var(--brand-color-primary-main, #F5F5F5);
+  color: var(--brand-color-primary-dark, #333);
+  line-height: var(--line-height-default, 100%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold, 700);
+  line-height: var(--line-height-md, 140%);
+}
+
+p {
+  line-height: var(--line-height-lg, 150%);
+}
+
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+input, textarea, select {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+
+*:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
