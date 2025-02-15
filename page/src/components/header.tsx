@@ -5,18 +5,19 @@ export const Header = () => {
   const [theme, toggleTheme] = useTheme() as [string, () => void];
 
   return (
-    <div className="bg-brand-primary-medium dark:bg-brand-primary-dark h-[80px] flex items-center justify-end gap-3 px-8">
+    <div data-testid="header" className="bg-brand-primary-medium dark:bg-brand-primary-dark h-[80px] flex items-center justify-end gap-3 px-8">
       <div className="flex gap-2 items-center">
         <p className="text-white dark:text-gray-100">Tema:</p>
         <button
+          data-testid="switch-theme"
           aria-label="Troca de tema"
           onClick={toggleTheme}
           className="bg-brand-secondary-main dark:bg-brand-secondary-dark p-1 rounded-xl hover:bg-brand-secondary-medium dark:hover:bg-brand-secondary-medium transition-colors duration-200"
         >
           {theme === 'light' ? (
-            <MoonIcon className="size-6 text-white" />
+            <MoonIcon data-testid="moon-icon" className="size-6 text-white" />
           ) : (
-            <SunIcon className="size-6 text-white" />
+            <SunIcon data-testid="sun-icon" className="size-6 text-white" />
           )}
         </button>
       </div>
