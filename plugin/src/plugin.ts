@@ -15,6 +15,10 @@ export class Plugin {
     button.style.bottom = '20px';
     button.style.right = '20px';
     button.style.zIndex = '1000';
+    button.style.backgroundColor = '#F06F06'
+    button.style.color = '#FFFFFF',
+    button.style.padding = '10px 12px',
+    button.style.borderRadius = '4px'
     button.onclick = () => this.onButtonClick();
     document.body.appendChild(button);
   }

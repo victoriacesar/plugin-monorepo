@@ -1,9 +1,26 @@
-import { ExtractedData, DeviceType } from "./types";
+import { ExtractedData, DeviceType, ThemeType } from './types';
 
 export class DataExtractor {
-  private themeSwitchCount: number =  0;
+  private themeSwitchCount: number = 0;
+  private currentTheme: ThemeType = 'light';
 
-  constructor() {}
+  constructor() {
+    this.setupThemeListener();
+  }
+
+  private setupThemeListener(): void {
+    const themeButton = document.querySelector('[data-testid="switch-theme"]');
+    themeButton?.addEventListener('click', () => {
+      const newTheme = document.documentElement.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      if (newTheme !== this.currentTheme) {
+        this.themeSwitchCount++;
+        this.currentTheme = newTheme;
+      }
+    });
+  }
 
   private getDeviceType(): DeviceType {
     const device = navigator.userAgent;
@@ -13,11 +30,7 @@ export class DataExtractor {
   }
 
   private getOS() {
-    const platform = (window.navigator as any).userAgentData?.platform;
-    if (platform.includes('win')) return 'Windows';
-    if (platform.includes('mac')) return 'MacOS';
-    if (platform.includes('linux')) return 'Linux';
-    return 'Unknown';
+    return (window.navigator as any).userAgentData?.platform;
   }
 
   public extractData(): ExtractedData {
@@ -29,6 +42,6 @@ export class DataExtractor {
       os,
       origin: window.location.origin,
       themeSwitchCount: this.themeSwitchCount,
-    }
+    };
   }
 }
