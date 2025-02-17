@@ -1,3 +1,6 @@
-import { Plugin } from "./plugin";
+import { Plugin } from './plugin';
 
-new Plugin();
+const apiUrl = process.env.API_URL;
+const token = process.env.API_TOKEN;
+
+new Plugin(apiUrl as string, token as string);

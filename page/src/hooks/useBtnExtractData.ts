@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 const useBtnExtractData = () => {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = '../public/plugin.js';
+    script.src = '/plugin.js';
     script.async = true;
 
     script.onload = () => {

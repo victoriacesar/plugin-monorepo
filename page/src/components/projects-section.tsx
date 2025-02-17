@@ -5,6 +5,7 @@ export const ProjectsSection = () => {
         Projetos
       </h2>
       <div className="flex flex-col items-start justify-start gap-4 border border-black dark:border-white rounded-lg m-4 px-6 py-12">
+        <img src="cine-mercy.png" alt="Imagem projeto CineMercy" />
         <h3 className="dark:text-white text-black text-sm font-bold self-center">
           Cine Mercy
         </h3>
